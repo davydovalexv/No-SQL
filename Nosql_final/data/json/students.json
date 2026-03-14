@@ -1,0 +1,62 @@
+[
+  {
+    "student_id": "S001",
+    "first_name": "Иван",
+    "last_name": "Петров",
+    "email": "ivan.petrov@university.ru",
+    "phone": "+79001112233",
+    "birth_date": { "$date": "2000-05-15T00:00:00.000Z" },
+    "enrollment_year": 2020,
+    "faculty": "Информатика",
+    "group": "ИВТ-201",
+    "created_at": { "$date": "2023-01-01T00:00:00.000Z" }
+  },
+  {
+    "student_id": "S002",
+    "first_name": "Мария",
+    "last_name": "Смирнова",
+    "email": "maria.smirnova@university.ru",
+    "phone": "+79002223344",
+    "birth_date": { "$date": "2001-03-22T00:00:00.000Z" },
+    "enrollment_year": 2021,
+    "faculty": "Информатика",
+    "group": "ИВТ-211",
+    "created_at": { "$date": "2023-01-01T00:00:00.000Z" }
+  },
+  {
+    "student_id": "S003",
+    "first_name": "Алексей",
+    "last_name": "Кузнецов",
+    "email": "alexey.kuznetsov@university.ru",
+    "phone": "+79003334455",
+    "birth_date": { "$date": "2000-11-30T00:00:00.000Z" },
+    "enrollment_year": 2020,
+    "faculty": "Математика",
+    "group": "МАТ-201",
+    "created_at": { "$date": "2023-01-01T00:00:00.000Z" }
+  },
+  {
+    "student_id": "S004",
+    "first_name": "Екатерина",
+    "last_name": "Волкова",
+    "email": "ekaterina.volkova@university.ru",
+    "phone": "+79004445566",
+    "birth_date": { "$date": "2002-07-18T00:00:00.000Z" },
+    "enrollment_year": 2022,
+    "faculty": "Физика",
+    "group": "ФИЗ-221",
+    "created_at": { "$date": "2023-01-01T00:00:00.000Z" }
+  },
+  {
+    "student_id": "S005",
+    "first_name": "Дмитрий",
+    "last_name": "Соколов",
+    "email": "dmitry.sokolov@university.ru",
+    "phone": "+79005556677",
+    "birth_date": { "$date": "2001-01-25T00:00:00.000Z" },
+    "enrollment_year": 2021,
+    "faculty": "Экономика",
+    "group": "ЭКО-211",
+    "created_at": { "$date": "2023-01-01T00:00:00.000Z" }
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "course_code": "CS101",
+    "course_name": "Основы программирования",
+    "credits": 5,
+    "semester": 1,
+    "department": "Информатика",
+    "lecturer_id": "L001",
+    "description": "Введение в программирование на Python",
+    "created_at": { "$date": "2023-01-01T00:00:00.000Z" }
+  },
+  {
+    "course_code": "MATH201",
+    "course_name": "Высшая математика",
+    "credits": 6,
+    "semester": 2,
+    "department": "Математика",
+    "lecturer_id": "L002",
+    "description": "Математический анализ и линейная алгебра",
+    "created_at": { "$date": "2023-01-01T00:00:00.000Z" }
+  },
+  {
+    "course_code": "PHYS301",
+    "course_name": "Общая физика",
+    "credits": 4,
+    "semester": 3,
+    "department": "Физика",
+    "lecturer_id": "L003",
+    "description": "Механика, термодинамика, электричество",
+    "created_at": { "$date": "2023-01-01T00:00:00.000Z" }
+  },
+  {
+    "course_code": "ECON401",
+    "course_name": "Микроэкономика",
+    "credits": 5,
+    "semester": 4,
+    "department": "Экономика",
+    "lecturer_id": "L004",
+    "description": "Основы микроэкономической теории",
+    "created_at": { "$date": "2023-01-01T00:00:00.000Z" }
+  },
+  {
+    "course_code": "CS102",
+    "course_name": "Алгоритмы и структуры данных",
+    "credits": 6,
+    "semester": 2,
+    "department": "Информатика",
+    "lecturer_id": "L001",
+    "description": "Изучение основных алгоритмов и структур данных",
+    "created_at": { "$date": "2023-01-01T00:00:00.000Z" }
+  }
+]

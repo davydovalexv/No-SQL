@@ -1,0 +1,46 @@
+[
+  {
+    "lecturer_id": "L001",
+    "first_name": "Анна",
+    "last_name": "Иванова",
+    "email": "anna.ivanova@university.ru",
+    "phone": "+79101112233",
+    "department": "Информатика",
+    "academic_degree": "Доцент",
+    "position": "Старший преподаватель",
+    "created_at": { "$date": "2023-01-01T00:00:00.000Z" }
+  },
+  {
+    "lecturer_id": "L002",
+    "first_name": "Петр",
+    "last_name": "Сидоров",
+    "email": "petr.sidorov@university.ru",
+    "phone": "+79102223344",
+    "department": "Математика",
+    "academic_degree": "Профессор",
+    "position": "Заведующий кафедрой",
+    "created_at": { "$date": "2023-01-01T00:00:00.000Z" }
+  },
+  {
+    "lecturer_id": "L003",
+    "first_name": "Ольга",
+    "last_name": "Павлова",
+    "email": "olga.pavlova@university.ru",
+    "phone": "+79103334455",
+    "department": "Физика",
+    "academic_degree": "Доктор наук",
+    "position": "Профессор",
+    "created_at": { "$date": "2023-01-01T00:00:00.000Z" }
+  },
+  {
+    "lecturer_id": "L004",
+    "first_name": "Сергей",
+    "last_name": "Козлов",
+    "email": "sergey.kozlov@university.ru",
+    "phone": "+79104445566",
+    "department": "Экономика",
+    "academic_degree": "Кандидат наук",
+    "position": "Доцент",
+    "created_at": { "$date": "2023-01-01T00:00:00.000Z" }
+  }
+]

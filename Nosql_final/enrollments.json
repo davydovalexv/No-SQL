@@ -1,0 +1,67 @@
+[
+  {
+    "student_id": "S001",
+    "course_code": "CS101",
+    "enrollment_date": { "$date": "2022-09-01T00:00:00.000Z" },
+    "academic_year": "2022-2023",
+    "semester": 1,
+    "status": "completed"
+  },
+  {
+    "student_id": "S001",
+    "course_code": "MATH201",
+    "enrollment_date": { "$date": "2022-09-01T00:00:00.000Z" },
+    "academic_year": "2022-2023",
+    "semester": 1,
+    "status": "completed"
+  },
+  {
+    "student_id": "S001",
+    "course_code": "CS102",
+    "enrollment_date": { "$date": "2023-09-01T00:00:00.000Z" },
+    "academic_year": "2023-2024",
+    "semester": 1,
+    "status": "active"
+  },
+  {
+    "student_id": "S002",
+    "course_code": "CS101",
+    "enrollment_date": { "$date": "2022-09-01T00:00:00.000Z" },
+    "academic_year": "2022-2023",
+    "semester": 1,
+    "status": "completed"
+  },
+  {
+    "student_id": "S002",
+    "course_code": "PHYS301",
+    "enrollment_date": { "$date": "2023-09-01T00:00:00.000Z" },
+    "academic_year": "2023-2024",
+    "semester": 1,
+    "status": "active"
+  },
+  {
+    "student_id": "S003",
+    "course_code": "MATH201",
+    "enrollment_date": { "$date": "2022-09-01T00:00:00.000Z" },
+    "academic_year": "2022-2023",
+    "semester": 1,
+    "status": "completed"
+  },
+  {
+    "student_id": "S004",
+    "course_code": "PHYS301",
+    "enrollment_date": { "$date": "2023-09-01T00:00:00.000Z" },
+    "academic_year": "2023-2024",
+    "semester": 1,
+    "status": "active"
+  },
+  {
+    "student_id": "S005",
+    "course_code": "ECON401",
+    "enrollment_date": { "$date": "2023-09-01T00:00:00.000Z" },
+    "academic_year": "2023-2024",
+    "semester": 1,
+    "status": "completed"
+  }
+]
+

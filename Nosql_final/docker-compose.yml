@@ -1,0 +1,87 @@
+version: '3.8'
+
+services:
+  mongodb_single:
+    image: mongo:latest
+    container_name: mongodb_single
+    restart: always
+    ports:
+      - "27019:27017"
+    volumes:
+      - single_data:/data/db
+      - ./data/json:/data/json
+
+  configsvr:
+    image: mongo:latest
+    container_name: mongo_configsvr
+    command: ["mongod", "--configsvr", "--replSet", "cfgRS", "--port", "27017", "--bind_ip_all"]
+    ports:
+      - "27100:27017"
+    volumes:
+      - config_data:/data/db
+
+  shard1:
+    image: mongo:latest
+    container_name: mongo_shard1
+    command: ["mongod", "--shardsvr", "--replSet", "shard1RS", "--port", "27017", "--bind_ip_all"]
+    ports:
+      - "27101:27017"
+    volumes:
+      - shard1_data:/data/db
+
+  shard2:
+    image: mongo:latest
+    container_name: mongo_shard2
+    command: ["mongod", "--shardsvr", "--replSet", "shard2RS", "--port", "27017", "--bind_ip_all"]
+    ports:
+      - "27102:27017"
+    volumes:
+      - shard2_data:/data/db
+
+  mongos-router:
+    image: mongo:latest
+    container_name: mongos_router
+    depends_on:
+      - configsvr
+      - shard1
+      - shard2
+    command: ["mongos", "--configdb", "cfgRS/mongo_configsvr:27017", "--bind_ip_all"]
+    ports:
+      - "27018:27017"
+    volumes:
+      - ./data/json:/data/json
+
+  mongo-setup:
+    image: mongo:latest
+    container_name: mongo_sharding_setup
+    restart: on-failure
+    depends_on:
+      - configsvr
+      - shard1
+      - shard2
+      - mongos-router
+    volumes:
+      - ./scripts:/scripts
+    entrypoint: ["bash", "-c", "sleep 25 && mongosh mongodb://mongo_configsvr:27017 /scripts/init-configrs.js && mongosh mongodb://mongo_shard1:27017 /scripts/init-shard1rs.js && mongosh mongodb://mongo_shard2:27017 /scripts/init-shard2rs.js && mongosh mongodb://mongos-router:27017 /scripts/init-router.js"]
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.app
+    container_name: university_app
+    depends_on:
+      - mongodb_single
+      - mongos-router
+    environment:
+      - MONGO_URI=mongodb://mongos-router:27017
+      - MONGO_URI_SINGLE=mongodb://mongodb_single:27017
+      - MONGO_URI_SHARDED=mongodb://mongos-router:27017
+    tty: true
+    stdin_open: true
+
+volumes:
+  single_data:
+  config_data:
+  shard1_data:
+  shard2_data:
+
